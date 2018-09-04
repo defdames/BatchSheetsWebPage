@@ -1,0 +1,14 @@
+﻿input[type=text]
+{
+  background-color:White;
+  text-align:left;
+  color:black;
+} 
+table.info td
+{
+    word-wrap:normal;
+    text-wrap:inherit;
+    max-width:300px;
+    padding:10px;
+}
+

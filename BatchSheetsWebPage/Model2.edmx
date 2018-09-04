@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="adageModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BATCH_SHEETS_New">
+          <Key>
+            <PropertyRef Name="Row" />
+          </Key>
+          <Property Name="Row" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DATE" Type="varchar" MaxLength="500" />
+          <Property Name="MIXER" Type="varchar" MaxLength="500" />
+          <Property Name="GRADE" Type="varchar" MaxLength="500" />
+          <Property Name="BATCH_NUMBER" Type="varchar" MaxLength="500" />
+          <Property Name="INGREDIENT1" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT2" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT3" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT4" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT5" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT6" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT7" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT8" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT9" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT10" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT11" Type="varchar" MaxLength="1000" />
+          <Property Name="INGREDIENT12" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO1" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO2" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO3" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO4" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO5" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO6" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO7" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO8" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO9" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO10" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO11" Type="varchar" MaxLength="1000" />
+          <Property Name="LOT_NO12" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT1" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT2" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT3" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT4" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT5" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT6" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT7" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT8" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT9" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT10" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT11" Type="varchar" MaxLength="1000" />
+          <Property Name="AMOUNT12" Type="varchar" MaxLength="1000" />
+          <Property Name="LOADED_BY1" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY2" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY3" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY4" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY5" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY6" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY7" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY8" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY9" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY10" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY11" Type="varchar" MaxLength="500" />
+          <Property Name="LOADED_BY12" Type="varchar" MaxLength="500" />
+          <Property Name="MIXING_INSTRUCTIONS" Type="varchar(max)" />
+          <Property Name="TYPE_OF_DRUM" Type="varchar" MaxLength="500" />
+          <Property Name="WEIGHT_PER_DRUM" Type="varchar" MaxLength="500" />
+          <Property Name="NUMBER_OF_DRUMS" Type="varchar" MaxLength="500" />
+          <Property Name="WEIGHT_PRODUCED" Type="varchar" MaxLength="500" />
+          <Property Name="REVISION_DATE" Type="varchar" MaxLength="500" />
+          <Property Name="FORM_VERSION" Type="varchar" MaxLength="500" />
+          <Property Name="MIXER_BATCH_SHEET" Type="varchar" MaxLength="500" />
+          <Property Name="INST2" Type="varchar" MaxLength="500" />
+          <Property Name="SAMPLE_AND_LABEL" Type="varchar" MaxLength="500" />
+          <Property Name="INGRED" Type="varchar" MaxLength="1000" />
+          <Property Name="POT_FORMULA" Type="varchar" MaxLength="500" />
+          <Property Name="BLADE_SPEED" Type="varchar" MaxLength="500" />
+          <Property Name="SPEED" Type="varchar" MaxLength="1000" />
+          <Property Name="PRESS_DATA" Type="varchar" MaxLength="1000" />
+          <Property Name="EXPIRATION_DATE" Type="varchar" MaxLength="500" />
+          <Property Name="STORAGE" Type="varchar" MaxLength="500" />
+          <Property Name="THEOR_WT" Type="varchar" MaxLength="500" />
+          <Property Name="OPER" Type="varchar" MaxLength="500" />
+          <Property Name="OPER_Copy" Type="varchar" MaxLength="500" />
+          <Property Name="Adage_Item_Code" Type="varchar" MaxLength="200" />
+          <Property Name="LastUpdate" Type="datetime" />
+          <Property Name="WhichUser" Type="varchar" MaxLength="50" />
+          <Property Name="NameofMachine" Type="varchar" MaxLength="50" />
+          <Property Name="COMMENTS" Type="varchar" MaxLength="8000" />
+        </EntityType>
+        <EntityContainer Name="adageModelStoreContainer">
+          <EntitySet Name="BATCH_SHEETS_New" EntityType="Self.BATCH_SHEETS_New" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="adageModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BATCH_SHEETS_New">
+          <Key>
+            <PropertyRef Name="Row" />
+          </Key>
+          <Property Name="Row" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DATE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MIXER" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="GRADE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="BATCH_NUMBER" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT3" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT4" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT5" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT6" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT7" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT8" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT9" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT10" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT11" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="INGREDIENT12" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO3" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO4" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO5" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO6" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO7" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO8" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO9" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO10" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO11" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOT_NO12" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT1" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT2" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT3" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT4" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT5" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT6" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT7" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT8" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT9" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT10" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT11" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="AMOUNT12" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY1" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY3" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY4" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY5" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY6" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY7" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY8" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY9" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY10" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY11" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="LOADED_BY12" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MIXING_INSTRUCTIONS" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="TYPE_OF_DRUM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="WEIGHT_PER_DRUM" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="NUMBER_OF_DRUMS" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="WEIGHT_PRODUCED" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="REVISION_DATE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="FORM_VERSION" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="MIXER_BATCH_SHEET" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="INST2" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SAMPLE_AND_LABEL" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="INGRED" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="POT_FORMULA" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="BLADE_SPEED" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="SPEED" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="PRESS_DATA" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="EXPIRATION_DATE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="STORAGE" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="THEOR_WT" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="OPER" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="OPER_Copy" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Adage_Item_Code" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="LastUpdate" Type="DateTime" Precision="3" />
+          <Property Name="WhichUser" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NameofMachine" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="COMMENTS" Type="String" MaxLength="8000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="adageAzureEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BATCH_SHEETS_New" EntityType="Self.BATCH_SHEETS_New" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="adageModelStoreContainer" CdmEntityContainer="adageAzureEntities">
+          <EntitySetMapping Name="BATCH_SHEETS_New">
+            <EntityTypeMapping TypeName="adageModel.BATCH_SHEETS_New">
+              <MappingFragment StoreEntitySet="BATCH_SHEETS_New">
+                <ScalarProperty Name="COMMENTS" ColumnName="COMMENTS" />
+                <ScalarProperty Name="Row" ColumnName="Row" />
+                <ScalarProperty Name="DATE" ColumnName="DATE" />
+                <ScalarProperty Name="MIXER" ColumnName="MIXER" />
+                <ScalarProperty Name="GRADE" ColumnName="GRADE" />
+                <ScalarProperty Name="BATCH_NUMBER" ColumnName="BATCH_NUMBER" />
+                <ScalarProperty Name="INGREDIENT1" ColumnName="INGREDIENT1" />
+                <ScalarProperty Name="INGREDIENT2" ColumnName="INGREDIENT2" />
+                <ScalarProperty Name="INGREDIENT3" ColumnName="INGREDIENT3" />
+                <ScalarProperty Name="INGREDIENT4" ColumnName="INGREDIENT4" />
+                <ScalarProperty Name="INGREDIENT5" ColumnName="INGREDIENT5" />
+                <ScalarProperty Name="INGREDIENT6" ColumnName="INGREDIENT6" />
+                <ScalarProperty Name="INGREDIENT7" ColumnName="INGREDIENT7" />
+                <ScalarProperty Name="INGREDIENT8" ColumnName="INGREDIENT8" />
+                <ScalarProperty Name="INGREDIENT9" ColumnName="INGREDIENT9" />
+                <ScalarProperty Name="INGREDIENT10" ColumnName="INGREDIENT10" />
+                <ScalarProperty Name="INGREDIENT11" ColumnName="INGREDIENT11" />
+                <ScalarProperty Name="INGREDIENT12" ColumnName="INGREDIENT12" />
+                <ScalarProperty Name="LOT_NO1" ColumnName="LOT_NO1" />
+                <ScalarProperty Name="LOT_NO2" ColumnName="LOT_NO2" />
+                <ScalarProperty Name="LOT_NO3" ColumnName="LOT_NO3" />
+                <ScalarProperty Name="LOT_NO4" ColumnName="LOT_NO4" />
+                <ScalarProperty Name="LOT_NO5" ColumnName="LOT_NO5" />
+                <ScalarProperty Name="LOT_NO6" ColumnName="LOT_NO6" />
+                <ScalarProperty Name="LOT_NO7" ColumnName="LOT_NO7" />
+                <ScalarProperty Name="LOT_NO8" ColumnName="LOT_NO8" />
+                <ScalarProperty Name="LOT_NO9" ColumnName="LOT_NO9" />
+                <ScalarProperty Name="LOT_NO10" ColumnName="LOT_NO10" />
+                <ScalarProperty Name="LOT_NO11" ColumnName="LOT_NO11" />
+                <ScalarProperty Name="LOT_NO12" ColumnName="LOT_NO12" />
+                <ScalarProperty Name="AMOUNT1" ColumnName="AMOUNT1" />
+                <ScalarProperty Name="AMOUNT2" ColumnName="AMOUNT2" />
+                <ScalarProperty Name="AMOUNT3" ColumnName="AMOUNT3" />
+                <ScalarProperty Name="AMOUNT4" ColumnName="AMOUNT4" />
+                <ScalarProperty Name="AMOUNT5" ColumnName="AMOUNT5" />
+                <ScalarProperty Name="AMOUNT6" ColumnName="AMOUNT6" />
+                <ScalarProperty Name="AMOUNT7" ColumnName="AMOUNT7" />
+                <ScalarProperty Name="AMOUNT8" ColumnName="AMOUNT8" />
+                <ScalarProperty Name="AMOUNT9" ColumnName="AMOUNT9" />
+                <ScalarProperty Name="AMOUNT10" ColumnName="AMOUNT10" />
+                <ScalarProperty Name="AMOUNT11" ColumnName="AMOUNT11" />
+                <ScalarProperty Name="AMOUNT12" ColumnName="AMOUNT12" />
+                <ScalarProperty Name="LOADED_BY1" ColumnName="LOADED_BY1" />
+                <ScalarProperty Name="LOADED_BY2" ColumnName="LOADED_BY2" />
+                <ScalarProperty Name="LOADED_BY3" ColumnName="LOADED_BY3" />
+                <ScalarProperty Name="LOADED_BY4" ColumnName="LOADED_BY4" />
+                <ScalarProperty Name="LOADED_BY5" ColumnName="LOADED_BY5" />
+                <ScalarProperty Name="LOADED_BY6" ColumnName="LOADED_BY6" />
+                <ScalarProperty Name="LOADED_BY7" ColumnName="LOADED_BY7" />
+                <ScalarProperty Name="LOADED_BY8" ColumnName="LOADED_BY8" />
+                <ScalarProperty Name="LOADED_BY9" ColumnName="LOADED_BY9" />
+                <ScalarProperty Name="LOADED_BY10" ColumnName="LOADED_BY10" />
+                <ScalarProperty Name="LOADED_BY11" ColumnName="LOADED_BY11" />
+                <ScalarProperty Name="LOADED_BY12" ColumnName="LOADED_BY12" />
+                <ScalarProperty Name="MIXING_INSTRUCTIONS" ColumnName="MIXING_INSTRUCTIONS" />
+                <ScalarProperty Name="TYPE_OF_DRUM" ColumnName="TYPE_OF_DRUM" />
+                <ScalarProperty Name="WEIGHT_PER_DRUM" ColumnName="WEIGHT_PER_DRUM" />
+                <ScalarProperty Name="NUMBER_OF_DRUMS" ColumnName="NUMBER_OF_DRUMS" />
+                <ScalarProperty Name="WEIGHT_PRODUCED" ColumnName="WEIGHT_PRODUCED" />
+                <ScalarProperty Name="REVISION_DATE" ColumnName="REVISION_DATE" />
+                <ScalarProperty Name="FORM_VERSION" ColumnName="FORM_VERSION" />
+                <ScalarProperty Name="MIXER_BATCH_SHEET" ColumnName="MIXER_BATCH_SHEET" />
+                <ScalarProperty Name="INST2" ColumnName="INST2" />
+                <ScalarProperty Name="SAMPLE_AND_LABEL" ColumnName="SAMPLE_AND_LABEL" />
+                <ScalarProperty Name="INGRED" ColumnName="INGRED" />
+                <ScalarProperty Name="POT_FORMULA" ColumnName="POT_FORMULA" />
+                <ScalarProperty Name="BLADE_SPEED" ColumnName="BLADE_SPEED" />
+                <ScalarProperty Name="SPEED" ColumnName="SPEED" />
+                <ScalarProperty Name="PRESS_DATA" ColumnName="PRESS_DATA" />
+                <ScalarProperty Name="EXPIRATION_DATE" ColumnName="EXPIRATION_DATE" />
+                <ScalarProperty Name="STORAGE" ColumnName="STORAGE" />
+                <ScalarProperty Name="THEOR_WT" ColumnName="THEOR_WT" />
+                <ScalarProperty Name="OPER" ColumnName="OPER" />
+                <ScalarProperty Name="OPER_Copy" ColumnName="OPER_Copy" />
+                <ScalarProperty Name="Adage_Item_Code" ColumnName="Adage_Item_Code" />
+                <ScalarProperty Name="LastUpdate" ColumnName="LastUpdate" />
+                <ScalarProperty Name="WhichUser" ColumnName="WhichUser" />
+                <ScalarProperty Name="NameofMachine" ColumnName="NameofMachine" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,547 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AFA31E5F-0484-498B-BE0C-208016EF1041}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BatchSheetsWebPage</RootNamespace>
+    <AssemblyName>BatchSheetsWebPage</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.20.2399\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.20.2399\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crystal.Reports.Essentials.13.0.20.2399\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Web.1.0.1\lib\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.DataVisualization.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.Design.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebDesign.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2015.12.0.2.2403\lib\net40\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.13.0.4001.0\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\OfficeThemes.css" />
+    <Content Include="Model2.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model2.Context.cs</LastGenOutput>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model2.cs</LastGenOutput>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Content>
+    <Content Include="Pages\Default.aspx" />
+    <Content Include="Pages\ReportPage.aspx" />
+    <Content Include="Pages\StyleSheet1.css" />
+    <EntityDeploy Include="Model2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model2.edmx.diagram">
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Content>
+    <Content Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Content>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Scripts\Office\1\outlook-win32.debug-vsdoc.js" />
+    <None Include="Scripts\Office\1\office-vsdoc.js" />
+    <None Include="Scripts\embedded\1.0\visio-web-embedded.debug-vsdoc.js" />
+    <Content Include="Scripts\embedded\1.0\visio-web-embedded.debug.js" />
+    <Content Include="Scripts\embedded\1.0\visio-web-embedded.js" />
+    <Content Include="Scripts\Office\1\access-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\access-web-16.00.js" />
+    <Content Include="Scripts\Office\1\ar-sa\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ar-sa\office_strings.js" />
+    <Content Include="Scripts\Office\1\ar-sa\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ar-sa\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\ariatelemetry\aria-web-telemetry.js" />
+    <Content Include="Scripts\Office\1\bg-bg\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\bg-bg\office_strings.js" />
+    <Content Include="Scripts\Office\1\bg-bg\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\bg-bg\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\cs-cz\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\cs-cz\office_strings.js" />
+    <Content Include="Scripts\Office\1\cs-cz\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\cs-cz\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\da-dk\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\da-dk\office_strings.js" />
+    <Content Include="Scripts\Office\1\da-dk\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\da-dk\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\de-de\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\de-de\office_strings.js" />
+    <Content Include="Scripts\Office\1\de-de\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\de-de\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\el-gr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\el-gr\office_strings.js" />
+    <Content Include="Scripts\Office\1\el-gr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\el-gr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\en-us\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\en-us\office_strings.js" />
+    <Content Include="Scripts\Office\1\en-us\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\en-us\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\es-es\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\es-es\office_strings.js" />
+    <Content Include="Scripts\Office\1\es-es\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\es-es\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\es6-promise.debug.js" />
+    <Content Include="Scripts\Office\1\es6-promise.js" />
+    <Content Include="Scripts\Office\1\et-ee\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\et-ee\office_strings.js" />
+    <Content Include="Scripts\Office\1\et-ee\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\et-ee\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\excel-15.01.debug.js" />
+    <Content Include="Scripts\Office\1\excel-15.01.js" />
+    <Content Include="Scripts\Office\1\excel-15.02.debug.js" />
+    <Content Include="Scripts\Office\1\excel-15.02.js" />
+    <Content Include="Scripts\Office\1\excel-15.debug.js" />
+    <Content Include="Scripts\Office\1\excel-15.js" />
+    <Content Include="Scripts\Office\1\excel-android-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\excel-android-16.00.js" />
+    <Content Include="Scripts\Office\1\excel-ios-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\excel-ios-16.00.js" />
+    <Content Include="Scripts\Office\1\excel-mac-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\excel-mac-16.00.js" />
+    <Content Include="Scripts\Office\1\excel-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\excel-web-16.00.js" />
+    <Content Include="Scripts\Office\1\excel-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\excel-win32-16.00.js" />
+    <Content Include="Scripts\Office\1\excel-win32-16.01.debug.js" />
+    <Content Include="Scripts\Office\1\excel-win32-16.01.js" />
+    <Content Include="Scripts\Office\1\excel-winrt-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\excel-winrt-16.00.js" />
+    <Content Include="Scripts\Office\1\excelios-15.debug.js" />
+    <Content Include="Scripts\Office\1\excelios-15.js" />
+    <Content Include="Scripts\Office\1\excelwebapp-15.01.debug.js" />
+    <Content Include="Scripts\Office\1\excelwebapp-15.01.js" />
+    <Content Include="Scripts\Office\1\excelwebapp-15.02.debug.js" />
+    <Content Include="Scripts\Office\1\excelwebapp-15.02.js" />
+    <Content Include="Scripts\Office\1\excelwebapp-15.debug.js" />
+    <Content Include="Scripts\Office\1\excelwebapp-15.js" />
+    <Content Include="Scripts\Office\1\fi-fi\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\fi-fi\office_strings.js" />
+    <Content Include="Scripts\Office\1\fi-fi\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\fi-fi\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\fr-fr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\fr-fr\office_strings.js" />
+    <Content Include="Scripts\Office\1\fr-fr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\fr-fr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\he-il\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\he-il\office_strings.js" />
+    <Content Include="Scripts\Office\1\he-il\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\he-il\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\hi-in\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\hi-in\office_strings.js" />
+    <Content Include="Scripts\Office\1\hi-in\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\hi-in\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\hr-hr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\hr-hr\office_strings.js" />
+    <Content Include="Scripts\Office\1\hr-hr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\hr-hr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\html2canvas.debug.js" />
+    <Content Include="Scripts\Office\1\html2canvas.js" />
+    <Content Include="Scripts\Office\1\hu-hu\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\hu-hu\office_strings.js" />
+    <Content Include="Scripts\Office\1\hu-hu\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\hu-hu\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\id-id\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\id-id\office_strings.js" />
+    <Content Include="Scripts\Office\1\id-id\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\id-id\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\it-it\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\it-it\office_strings.js" />
+    <Content Include="Scripts\Office\1\it-it\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\it-it\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\ja-jp\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ja-jp\office_strings.js" />
+    <Content Include="Scripts\Office\1\ja-jp\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ja-jp\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\kk-kz\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\kk-kz\office_strings.js" />
+    <Content Include="Scripts\Office\1\kk-kz\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\kk-kz\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\ko-kr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ko-kr\office_strings.js" />
+    <Content Include="Scripts\Office\1\ko-kr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ko-kr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\lt-lt\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\lt-lt\office_strings.js" />
+    <Content Include="Scripts\Office\1\lt-lt\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\lt-lt\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\lv-lv\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\lv-lv\office_strings.js" />
+    <Content Include="Scripts\Office\1\lv-lv\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\lv-lv\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\ms-my\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ms-my\office_strings.js" />
+    <Content Include="Scripts\Office\1\ms-my\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ms-my\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\nb-no\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\nb-no\office_strings.js" />
+    <Content Include="Scripts\Office\1\nb-no\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\nb-no\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\nl-nl\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\nl-nl\office_strings.js" />
+    <Content Include="Scripts\Office\1\nl-nl\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\nl-nl\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\o15apptofilemappingtable.debug.js" />
+    <Content Include="Scripts\Office\1\o15apptofilemappingtable.js" />
+    <Content Include="Scripts\Office\1\office.debug.js" />
+    <Content Include="Scripts\Office\1\office.js" />
+    <Content Include="Scripts\Office\1\onenote-ios-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\onenote-ios-16.00.js" />
+    <Content Include="Scripts\Office\1\onenote-mac-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\onenote-mac-16.00.js" />
+    <Content Include="Scripts\Office\1\onenote-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\onenote-web-16.00.js" />
+    <Content Include="Scripts\Office\1\onenote-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\onenote-win32-16.00.js" />
+    <Content Include="Scripts\Office\1\onenote-winrt-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\onenote-winrt-16.00.js" />
+    <Content Include="Scripts\Office\1\outlook-15.01.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-15.01.js" />
+    <Content Include="Scripts\Office\1\outlook-15.02.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-15.02.js" />
+    <Content Include="Scripts\Office\1\outlook-15.03.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-15.03.js" />
+    <Content Include="Scripts\Office\1\outlook-15.04.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-15.04.js" />
+    <Content Include="Scripts\Office\1\outlook-15.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-15.js" />
+    <Content Include="Scripts\Office\1\outlook-android-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-android-16.00.js" />
+    <Content Include="Scripts\Office\1\outlook-ios-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-ios-16.00.js" />
+    <Content Include="Scripts\Office\1\outlook-mac-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-mac-16.00.js" />
+    <Content Include="Scripts\Office\1\outlook-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-web-16.00.js" />
+    <Content Include="Scripts\Office\1\outlook-web-16.01.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-web-16.01.js" />
+    <Content Include="Scripts\Office\1\outlook-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-win32-16.00.js" />
+    <Content Include="Scripts\Office\1\outlook-win32-16.01.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-win32-16.01.js" />
+    <Content Include="Scripts\Office\1\outlook-win32-16.02.debug.js" />
+    <Content Include="Scripts\Office\1\outlook-win32-16.02.js" />
+    <Content Include="Scripts\Office\1\outlookwebapp-15.01.debug.js" />
+    <Content Include="Scripts\Office\1\outlookwebapp-15.01.js" />
+    <Content Include="Scripts\Office\1\outlookwebapp-15.debug.js" />
+    <Content Include="Scripts\Office\1\outlookwebapp-15.js" />
+    <Content Include="Scripts\Office\1\pl-pl\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\pl-pl\office_strings.js" />
+    <Content Include="Scripts\Office\1\pl-pl\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\pl-pl\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\powerpoint-15.01.debug.js" />
+    <Content Include="Scripts\Office\1\powerpoint-15.01.js" />
+    <Content Include="Scripts\Office\1\powerpoint-15.02.debug.js" />
+    <Content Include="Scripts\Office\1\powerpoint-15.02.js" />
+    <Content Include="Scripts\Office\1\powerpoint-15.debug.js" />
+    <Content Include="Scripts\Office\1\powerpoint-15.js" />
+    <Content Include="Scripts\Office\1\powerpoint-ios-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\powerpoint-ios-16.00.js" />
+    <Content Include="Scripts\Office\1\powerpoint-mac-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\powerpoint-mac-16.00.js" />
+    <Content Include="Scripts\Office\1\powerpoint-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\powerpoint-web-16.00.js" />
+    <Content Include="Scripts\Office\1\powerpoint-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\powerpoint-win32-16.00.js" />
+    <Content Include="Scripts\Office\1\powerpoint-win32-16.01.debug.js" />
+    <Content Include="Scripts\Office\1\powerpoint-win32-16.01.js" />
+    <Content Include="Scripts\Office\1\powerpointios-15.debug.js" />
+    <Content Include="Scripts\Office\1\powerpointios-15.js" />
+    <Content Include="Scripts\Office\1\project-15.01.debug.js" />
+    <Content Include="Scripts\Office\1\project-15.01.js" />
+    <Content Include="Scripts\Office\1\project-15.02.debug.js" />
+    <Content Include="Scripts\Office\1\project-15.02.js" />
+    <Content Include="Scripts\Office\1\project-15.debug.js" />
+    <Content Include="Scripts\Office\1\project-15.js" />
+    <Content Include="Scripts\Office\1\project-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\project-win32-16.00.js" />
+    <Content Include="Scripts\Office\1\pt-br\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\pt-br\office_strings.js" />
+    <Content Include="Scripts\Office\1\pt-br\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\pt-br\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\pt-pt\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\pt-pt\office_strings.js" />
+    <Content Include="Scripts\Office\1\pt-pt\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\pt-pt\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\ro-ro\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ro-ro\office_strings.js" />
+    <Content Include="Scripts\Office\1\ro-ro\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ro-ro\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\ru-ru\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ru-ru\office_strings.js" />
+    <Content Include="Scripts\Office\1\ru-ru\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\ru-ru\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\sk-sk\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\sk-sk\office_strings.js" />
+    <Content Include="Scripts\Office\1\sk-sk\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\sk-sk\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\sl-si\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\sl-si\office_strings.js" />
+    <Content Include="Scripts\Office\1\sl-si\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\sl-si\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\sr-latn-cs\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\sr-latn-cs\office_strings.js" />
+    <Content Include="Scripts\Office\1\sr-latn-cs\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\sr-latn-cs\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\sv-se\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\sv-se\office_strings.js" />
+    <Content Include="Scripts\Office\1\sv-se\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\sv-se\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\th-th\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\th-th\office_strings.js" />
+    <Content Include="Scripts\Office\1\th-th\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\th-th\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\tr-tr\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\tr-tr\office_strings.js" />
+    <Content Include="Scripts\Office\1\tr-tr\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\tr-tr\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\uk-ua\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\uk-ua\office_strings.js" />
+    <Content Include="Scripts\Office\1\uk-ua\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\uk-ua\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\vi-vn\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\vi-vn\office_strings.js" />
+    <Content Include="Scripts\Office\1\vi-vn\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\vi-vn\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\word-15.01.debug.js" />
+    <Content Include="Scripts\Office\1\word-15.01.js" />
+    <Content Include="Scripts\Office\1\word-15.02.debug.js" />
+    <Content Include="Scripts\Office\1\word-15.02.js" />
+    <Content Include="Scripts\Office\1\word-15.debug.js" />
+    <Content Include="Scripts\Office\1\word-15.js" />
+    <Content Include="Scripts\Office\1\word-ios-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\word-ios-16.00.js" />
+    <Content Include="Scripts\Office\1\word-mac-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\word-mac-16.00.js" />
+    <Content Include="Scripts\Office\1\word-web-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\word-web-16.00.js" />
+    <Content Include="Scripts\Office\1\word-win32-16.00.debug.js" />
+    <Content Include="Scripts\Office\1\word-win32-16.00.js" />
+    <Content Include="Scripts\Office\1\word-win32-16.01.debug.js" />
+    <Content Include="Scripts\Office\1\word-win32-16.01.js" />
+    <Content Include="Scripts\Office\1\wordios-15.debug.js" />
+    <Content Include="Scripts\Office\1\wordios-15.js" />
+    <Content Include="Scripts\Office\1\zh-cn\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\zh-cn\office_strings.js" />
+    <Content Include="Scripts\Office\1\zh-cn\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\zh-cn\outlook_strings.js" />
+    <Content Include="Scripts\Office\1\zh-tw\office_strings.debug.js" />
+    <Content Include="Scripts\Office\1\zh-tw\office_strings.js" />
+    <Content Include="Scripts\Office\1\zh-tw\outlook_strings.debug.js" />
+    <Content Include="Scripts\Office\1\zh-tw\outlook_strings.js" />
+    <Content Include="Scripts\Office\metadata\endpoints.xml" />
+    <Content Include="Scripts\Office\metadata\features.xml" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial130.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial130.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BATCH_SHEETS_New.cs">
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.Designer.cs">
+      <DependentUpon>Model2.edmx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Pages\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ReportPage.aspx.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\ReportPage.aspx.designer.cs">
+      <DependentUpon>ReportPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55609</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55609/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
